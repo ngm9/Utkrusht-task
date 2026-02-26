@@ -1,0 +1,50 @@
+# =========================
+# Utkrushta Task - .gitignore
+# =========================
+
+# ----- Project-specific -----
+infra_assets/
+temp_deploy_*/
+export/
+non_tech_flow/test_assets/
+agent_task_creator.log
+
+# ----- Environment & Secrets -----
+.env
+.env.*
+.env.local
+.env.production
+.env.development
+
+# ----- Python -----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+.venv/
+venv/
+env/
+.Python
+
+# ----- IDE & Editors -----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ----- Claude Code -----
+.claude/
+
+# ----- Logs -----
+*.log
+
+# ----- OS -----
+desktop.ini

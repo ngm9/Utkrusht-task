@@ -1,0 +1,18 @@
+[
+    {
+        "competency_id": "a79ab7a9-d985-40a8-bfbc-9b0e431624fa",
+        "created_at": "2025-07-29T03:14:19.087072+00:00",
+        "proficiency": "INTERMEDIATE",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "NextJs",
+        "scope": "An Intermediate Next.js proficiency level includes the ability to build and maintain full-stack Next.js applications using dynamic routing, server-side rendering (SSR), static site generation (SSG), and implementing data fetching methods like getStaticProps, getStaticPaths, and getServerSideProps. The individual can create and integrate API routes, develop new features and UI components based on requirements, and has a strong grasp of React fundamentals, including hooks and state management using Context API or Redux. They are proficient with tools such as Git for version control, npm/Yarn for package management, and IDEs like VSCode, and can utilize testing frameworks like Jest and React Testing Library for unit and integration testing, as well as linters like ESLint and Prettier for code quality. They can optimize application performance through techniques like code-splitting, lazy loading, and using the Next.js Image component, and handle styling using CSS Modules, Sass, or styled-components. They are capable of integrating authentication solutions (e.g., NextAuth.js), managing internationalization (i18n), and working with middleware for tasks like authentication checks. They participate effectively in team collaborations, including code reviews, and can refactor existing codebases to improve performance and maintainability. They understand basic deployment processes to platforms like Vercel or Netlify, can manage environment configurations for different stages, have a basic knowledge of CI/CD pipelines, and can implement monitoring and logging using tools like Sentry or LogRocket."
+    },
+    {
+        "competency_id": "55491147-1d2f-455e-9958-1e35f1df5a82",
+        "created_at": "2025-07-29T03:14:19.087072+00:00",
+        "proficiency": "INTERMEDIATE",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "TypeScript",
+        "scope": "An intermediate TypeScript developer (3-6 years experience) is proficient in advanced type system features like generics, union and intersection types, type inference and assertions, type guards, and basic mapped and conditional types. They design complex interfaces, implement classes with inheritance, abstract classes, and access modifiers, and organize code using ES6 modules and understand module resolution. They effectively use asynchronous programming with Promises and async/await, handle errors, and write unit and integration tests using frameworks like Jest or Mocha. They configure the TypeScript compiler (tsconfig.json), use build tools like Webpack or Rollup, and enforce code quality with ESLint and Prettier. They develop applications using TypeScript with frameworks like Angular or React, build back-end services with Node.js and TypeScript, and consume RESTful or GraphQL APIs. They participate in system design applying SOLID principles, refactor and optimize code, and implement security best practices. They maintain and improve existing systems, set up CI/CD pipelines, and collaborate using Git and Agile methodologies. They mentor junior developers, contribute to code reviews, document code and APIs, and stay updated with the latest TypeScript features and community developments."
+    }
+]

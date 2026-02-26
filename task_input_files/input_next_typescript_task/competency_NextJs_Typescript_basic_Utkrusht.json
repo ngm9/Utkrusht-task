@@ -1,0 +1,18 @@
+[
+    {
+        "competency_id": "6c9126be-d12a-4058-9395-4ae90d9be24b",
+        "created_at": "2025-07-29T03:14:19.087072+00:00",
+        "proficiency": "BASIC",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "NextJs",
+        "scope": "BASIC proficiency in Next.js includes setting up projects using `create-next-app`, understanding the basic folder structure, and creating pages with file-based routing using the `Link` component. The individual can render static content with JSX, apply basic styling using CSS, CSS Modules, or libraries like Bootstrap and Tailwind CSS, and create functional React components that receive props for dynamic content. They are capable of client-side data fetching using `fetch` or Axios and manage simple state within components. Tools they use include code editors like Visual Studio Code, basic Git commands (clone, commit, push, pull), npm or Yarn for dependencies, terminal commands to run development servers, and browser DevTools for debugging. They grasp fundamental concepts such as what Next.js is, the benefits of server-side rendering (SSR) and static site generation (SSG) at a high level, basic React concepts (components, props, state), JSX syntax, and have basic SEO awareness. Their technical expertise covers JavaScript proficiency with ES6 syntax, simple debugging using console.log, module import/export, and setting up the development environment with Node.js. They can build simple web applications or static websites, modify templates, create basic forms, and perform maintenance tasks like updating content or dependencies. However, they have limited or no experience with advanced Next.js features like API routes or middleware, performance optimization, advanced state management (Redux, Context API), and testing frameworks like Jest or React Testing Library."
+    },
+    {
+        "competency_id": "0a7ff46c-d627-47c8-b925-8e4d2c6192b4",
+        "created_at": "2025-07-29T03:14:19.087072+00:00",
+        "proficiency": "BASIC",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "TypeScript",
+        "scope": "A person with BASIC proficiency level in TypeScript as a competency should be able to understand its static typing philosophy, create basic type annotations, handle interfaces, enums, type aliases, and appreciate simple function overloading. They can set up small to medium TypeScript projects using npm or yarn, understand the structure of tsconfig.json (including target, module, outDir, and rootDir), and enable strict mode. They can run the TypeScript compiler (tsc), maintain minimal build configs with bundlers like Webpack or Rollup, and add or modify scripts in package.json. They use ESLint with TypeScript support and Prettier for code quality and formatting. They can recognize and fix type mismatches, debug in an IDE (e.g., VS Code) using sourcemaps, and refactor simple JavaScript into typed TypeScript. They can craft simple utility functions with typed parameters and return values, manage unions and intersections, and apply minor updates to type definitions. They know how to integrate TypeScript into popular frameworks like React, Angular, or Node.js, generate starter projects with CLI tools, and install @types packages. They organize code into modules, handle default and named exports, and follow Git-based workflows to review TypeScript code. They can write basic tests with Jest, Mocha, or Jasmine and handle typed mocks or fixtures. They have a conceptual grasp of advanced features like generics, decorators, and utility types without deep proficiency."
+    }
+]

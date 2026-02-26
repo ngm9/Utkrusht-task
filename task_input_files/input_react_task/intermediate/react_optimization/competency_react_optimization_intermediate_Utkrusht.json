@@ -1,0 +1,19 @@
+[
+    {
+        "competency_id": "a1b2c3d4-e5f6-4g7h-8i9j-0k1l2m3n4o5p",
+        "created_at": "2025-07-29T03:14:19.087072+00:00",
+        "proficiency": "INTERMEDIATE",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "ReactJs",   
+        "scope": "An individual with INTERMEDIATE proficiency in React has 3-6 years of experience and a solid grasp of React's core concepts. They can create functional and class components, manage state and props, and understand component lifecycle methods. Familiar with state management libraries like Redux or MobX, they proficiently use hooks—including custom hooks—for better code reusability. They implement routing with React Router, handle forms and validation using libraries like Formik or Yup, and integrate APIs using fetch or Axios. Skilled in styling techniques, they utilize CSS-in-JS libraries and ensure responsive design. They optimize performance through memoization and lazy loading, and write unit tests using Jest and React Testing Library. Familiar with build tools like Webpack and Babel, they can deploy applications to platforms like Netlify or AWS Amplify. They collaborate effectively using Git, participate in code reviews, and are accustomed to Agile methodologies."
+    },
+    {
+        "competency_id": "6c7503df-b957-44a4-a355-86800bd981be",
+        "created_at": "2025-07-29T03:14:19.087072+00:00",
+        "proficiency": "INTERMEDIATE",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "ReactJs - Optimization",   
+        "scope": "A person with INTERMEDIATE proficiency in React Optimization should have a solid understanding of how performance trade-offs affect real-world user experience, including the distinction between perceived and actual performance. They should deeply understand React’s rendering lifecycle, Virtual DOM, reconciliation process, and how state, props, context, and hooks influence re-rendering behavior. They should be able to identify, analyze, and mitigate common performance bottlenecks such as unnecessary re-renders, inefficient state placement, prop drilling, context overuse, large component trees, and expensive synchronous computations during render. They should confidently apply memoization techniques using React.memo, useMemo, and useCallback, understand dependency management and invalidation, and make informed decisions about when memoization is beneficial versus harmful. They should optimize large lists using windowing and virtualization libraries (react-window, react-virtualized), implement pagination or infinite scrolling patterns, and ensure stable keys and efficient conditional rendering. They should manage asynchronous workflows effectively, including data fetching, caching, deduplication, background refetching, and pagination using tools like React Query or SWR, while preventing redundant network calls and handling loading, error, and stale states gracefully. They should understand how to minimize main-thread blocking, defer non-critical work, and move heavy computations off the render path. They should make informed styling and layout decisions to reduce layout shifts, avoid costly CSS patterns, and improve Web Vitals such as LCP, CLS, and FID. They should be proficient in profiling and diagnostics using React DevTools, browser Performance and Network panels, and Lighthouse, and translate findings into actionable optimizations. They should understand the impact of build tooling and bundling strategies, including tree-shaking, code-splitting, lazy loading, and dependency analysis using tools like Webpack, Vite, or Parcel. They should incorporate performance considerations into testing strategies, validate behavior with large datasets, contribute meaningful feedback during code reviews, document optimization decisions and trade-offs, and proactively communicate performance risks or improvements within the team."
+    }
+  
+]

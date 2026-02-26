@@ -1,0 +1,11 @@
+[
+    {
+        "competency_id": "1b2c980e-4dee-44a8-8a47-09ea459e2cf2",
+        "created_at": "2025-03-31T05:05:21.227830+00:00",
+        "proficiency": "BEGINNER",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "ReactJs",
+        "scope": "A BEGINNER in ReactJS, with only having finished fundamental courses and an internship experience, can spin up new React projects using basic scaffolding tools like Create React App and manage dependencies with npm or Yarn. They can create functional components, render basic JSX, and pass props between parent-child components. They handle simple state using useState or class-based this.state and add minimal interactivity (e.g., button clicks, form submissions). They have heard of lifecycle methods or useEffect but without deep understanding. They mostly rely on tutorials and debugging via console logs or simple browser DevTools checks. They can build small apps (like a to-do list) and style components with plain CSS or a simple library like Bootstrap. Their project architecture is rudimentary, with a folder structure containing a few basic components. They know basic Git commands but likely lack familiarity with advanced workflows. They have foundational knowledge from courses or internships but limited hands-on experience or exposure to complex production scenarios."
+    
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "competency_id": "e3f1c2ab-d4a7-4c9f-95d2-9d7f7fcb2c77",
+        "created_at": "2025-03-31T05:05:21.227830+00:00",
+        "proficiency": "BASIC",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "NodeJs",
+        "scope": "At the BASIC proficiency level in Node.js (1-3 years of experience), an individual understands what Node.js is, its event-driven, non-blocking I/O model, and when to use it over other technologies, while having a solid grasp of JavaScript fundamentals like variables, data types, functions, control structures, and basic object-oriented programming concepts. They can install Node.js, set up a development environment, use the REPL, and work with core modules such as fs, http, path, and os, as well as create and export custom modules, manage packages with NPM, and understand the purpose of package.json. They are capable of writing simple Node.js scripts, building basic HTTP servers to handle requests and responses, implementing basic routing, performing file system operations using the fs module, and creating simple command-line applications. They understand and use callbacks to handle asynchronous operations, utilize the EventEmitter for event handling, and work with timers like setTimeout and setInterval. They can parse and stringify JSON data, handle errors using try...catch blocks and in callbacks, and use console.log() for debugging purposes. They may have introductory exposure to Express.js for setting up basic web servers and handling routes, and understand the concept of middleware. They use Git for basic version control tasks, run Node.js applications locally, and navigate the file system, run scripts, and manage packages via the command line. However, they are not equipped to design complex architectures or systems, have limited understanding of Promises and async/await, advanced asynchronous patterns, performance optimization, security best practices, advanced debugging techniques, and integrating databases like MongoDB or MySQL with Node.js applications."
+    
+    },
+    {
+        "competency_id": "22691b45-e133-426d-96df-335df1c1be1d",
+        "created_at": "2025-03-31T05:05:21.227830+00:00",
+        "proficiency": "BASIC",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "MongoDB",
+        "scope": "Basic proficiency in MongoDB (1-2 years) includes installing and configuring MongoDB on local or simple cloud deployments, using tools like mongosh and MongoDB Compass for everyday operations. They should be confident with CRUD operations, basic data modeling (embedding vs. referencing), and creating single-field or compound indexes. They must know the aggregation pipeline at a simple level (e.g., $match, $group, $project) and understand replication fundamentals like primary/secondary roles and minimal 3-node setups. Security basics such as role-based access control, user management, and enabling authentication are also expected. Familiarity with monitoring tools (dbStats, collStats), using explain() for performance checks, and referencing official MongoDB docs to solve routine tasks is important. They should handle at least one driver or ORM (e.g., Mongoose, PyMongo) for data interactions, including basic error handling and reconnection logic. A basic understanding of sharding (horizontal scaling concepts) is needed, though deep production-level experience may be limited. They can demonstrate comfort with Docker or CI/CD pipelines to spin up MongoDB for testing, as well as straightforward backup/restore procedures. They can answer conceptual questions about data modeling, indexing strategies, basic aggregation queries, and simple replication and failover processes, applying best practices for small to medium-scale deployments."
+        
+    }
+]

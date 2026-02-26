@@ -1,0 +1,10 @@
+[
+    {
+        "competency_id": "89fdeab1-a5d1-41b3-836d-608efc44f8ec",
+        "created_at": "2025-07-29T03:14:19.087072+00:00",
+        "proficiency": "BASIC",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "Shell",
+        "scope": "A person with BASIC proficiency level in Shell as a competency should be able to confidently navigate the file system using commands like cd, pwd, ls, and manage files and directories with touch, mkdir, cp, mv, rm, rmdir, understanding absolute vs relative paths, file permissions, and ownership via ls -l, chmod, chown. They can view and manipulate text files with cat, less, more, head, tail, and process text using grep (with basic regex), cut, sort, uniq, wc, tr, awk, sed, as well as use pipes and redirection (> >> <) for data flow. They understand different shell types (bash, sh, zsh, ksh), can switch shells, and know the difference between login/non-login and interactive/non-interactive shells. They can create, edit, and execute basic shell scripts with proper shebang (#!/bin/bash), set and use variables (including positional and special variables like $1, $?, $$), and implement simple control structures (if, then, else, elif, for, while, until), using correct quoting and escaping. They can manage processes and jobs (ps, top, kill, killall, &, fg, bg), distinguish between job and process IDs, and automate routine tasks with simple scripts and basic cron scheduling (editing crontab, simple syntax). They understand and manage environment variables (export, echo $VAR, PATH, HOME, USER), are aware of shell configuration files (.bashrc, .profile, .bash_profile), and use terminal editors (nano, vi, vim) for script editing. They use man, --help, info for command documentation, add debug statements (echo), interpret basic error messages, and apply safe practices (quoting variables, checking file existence, avoiding destructive commands like rm -rf). They recognize the importance of script readability, maintainability, and documentation, and are proficient with standard Unix/Linux command-line utilities."
+    }
+]

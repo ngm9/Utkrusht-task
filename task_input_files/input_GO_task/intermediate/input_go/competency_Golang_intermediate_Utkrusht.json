@@ -1,0 +1,10 @@
+[
+    {
+        "competency_id": "1602bde1-f17b-4eef-9df4-87aa7b28efe9",
+        "created_at": "2025-07-29T03:14:19.087072+00:00",
+        "proficiency": "INTERMEDIATE",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "Golang",
+        "scope": "A Go developer with INTERMEDIATE proficiency levels, with 3-6 years of experience, has solid command of Go’s core syntax (slices, maps, structs, interfaces, pointers), concurrency (goroutines, channels, worker pools), and error handling (custom errors, error wrapping). They structure projects with Go modules/packages, follow Go idioms, and leverage design patterns like factory, decorator, or adapter. They write unit/integration tests using the `testing` package, incorporate mocking frameworks, and track coverage metrics with linting tools. They handle day-to-day coding tasks like debugging concurrency issues, managing semantic versioning conflicts, optimizing performance, and preventing race conditions or deadlocks. They use `go mod` for dependency management, create reproducible builds, and integrate with Docker and CI/CD pipelines. They design REST/gRPC services (often using `gorilla/mux`), manage API versioning, and implement basic microservice patterns (pub-sub, message queues). They identify performance bottlenecks using profiling and benchmarking tools (`pprof`, `go test -bench`) and apply caching and concurrency best practices. They handle security concerns (secret management, injection prevention), implement logging frameworks (`zap`, `logrus`), and integrate authentication (JWT, OAuth2). They stay aware of newer features (generics) and maintain familiarity with popular libraries (e.g., `sqlx`, `gorm`) while refining architectural thinking."
+    }
+]

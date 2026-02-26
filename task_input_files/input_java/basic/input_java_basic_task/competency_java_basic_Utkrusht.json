@@ -1,0 +1,10 @@
+[
+    {
+        "competency_id": "c9bd828d-58c2-4377-9ea7-be5044ecc284",
+        "created_at": "2025-07-29T03:14:19.087072+00:00",
+        "proficiency": "BASIC",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "Java",
+        "scope": "A person with BASIC proficiency level in Java as a competency should be able to understand the Java execution model (JDK, JRE, JVM) and write maintainable code using proper packages and naming conventions. They possess foundational proficiency in Java syntax, including control flow, error handling, and basic class structures. Their knowledge of OOP principles (Encapsulation, Inheritance, Polymorphism, Abstraction) allows them to create coherent classes with appropriate access modifiers. They are comfortable employing Java’s core collections (List, Set, Map), grasping performance impacts of ArrayList vs LinkedList and HashMap vs TreeMap. They handle exceptions using try-catch-finally and appreciate the difference between checked and unchecked exceptions. Their concurrency awareness extends to creating and running simple threads, with a limited understanding of race conditions and synchronization. They can effectively use IDEs (e.g., IntelliJ, Eclipse), basic build tools (Maven, Gradle), and version control (Git) for daily tasks and collaboration. They have exposure to simple frameworks or libraries like JDBC for database connectivity, JUnit for testing, and minimal Spring Boot configurations. They follow introductory best practices such as organizing code, avoiding duplication, and adhering to naming standards, with an initial grasp of SOLID principles. They can debug code using IDE breakpoints, write straightforward test cases, and refactor small code snippets to address performance or readability concerns. They have participated in at least one small Java project, handled feature development, bug fixes, and engaged in code reviews. Their approach to software development involves basic Agile or similar methodologies, ensuring they can communicate effectively within a team."
+    }
+]

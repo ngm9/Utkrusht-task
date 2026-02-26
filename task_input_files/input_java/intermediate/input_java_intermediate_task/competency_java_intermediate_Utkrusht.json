@@ -1,0 +1,10 @@
+[
+    {
+        "competency_id": "f029f9f9-49b0-4551-b063-b2a817ec57d5",
+        "created_at": "2025-07-29T03:14:19.087072+00:00",
+        "proficiency": "INTERMEDIATE",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "Java",
+        "scope": "An **Intermediate Java developer (3-5 years)** should have a solid grasp of **OOP principles (Encapsulation, Inheritance, Polymorphism, Abstraction)**, **Collections Framework (List, Set, Map, Queue)**, **Exception Handling**, **Multithreading (Executors, Synchronization, Locks)**, **File I/O (Streams, NIO)**, and **Java 8+ features (Lambdas, Streams, Optionals, Functional Interfaces)**. They should be proficient in **Spring Boot (Spring MVC, Security, Data)**, **Hibernate/JPA**, **RESTful APIs**, **JSON/XML parsing (Jackson, Gson)**, **Unit testing (JUnit, TestNG)**, **Dependency management (Maven, Gradle)**, and **Git version control**. They should understand **SQL (Joins, Indexing, Transactions, ACID)**, **NoSQL (MongoDB, Redis)**, **Design Patterns (Factory, Singleton, Strategy, Observer)**, and **SOLID principles**. Expected to troubleshoot with **IntelliJ/Eclipse Debugger, Profilers (JVisualVM, JProfiler)**, optimize performance, and resolve **memory leaks, thread contention, and deadlocks**. Should have experience in **CI/CD (Jenkins, GitHub Actions, GitLab CI)**, deploying apps on **Tomcat, Jetty, AWS/GCP/Azure**, and implementing **authentication (JWT, OAuth, Spring Security)** while following **secure coding practices (OWASP, XSS, CSRF protection)**. Should contribute to **code reviews, Agile workflows, documentation (Javadoc, Confluence)**, and collaborate with **QA, DevOps, and Product teams**. Can build and consume **RESTful APIs, integrate third-party services**, and optimize application **performance, memory management, and garbage collection**. Expected to work independently on **medium-complexity tasks** but lacks deep expertise in **JVM internals, distributed system design, Kubernetes, advanced cloud deployments**, and does not **architect large-scale applications** but can support them under guidance."
+    }
+]

@@ -1,0 +1,19 @@
+[
+    {
+        "competency_id": "a0ead1b9-4a12-439c-94bb-815dea96683f",
+        "created_at": "2025-07-29T03:14:19.087072+00:00",
+        "proficiency": "BASIC",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "Redis",   
+        "scope": "A person with BASIC proficiency level in Redis as a competency should be able to describe Redis as an in-memory, single-threaded, event-driven store, differentiate RDB snapshots vs AOF persistence and explain TTL, expiration and eviction interactions on key lifecycle. They can choose the correct structure—strings, hashes, lists, sets, sorted sets, bitmaps, HyperLogLog or GEO—for a problem, knowing memory and complexity costs. They are fluent with redis-cli, pipelining, MULTI/EXEC, Lua EVAL, INFO, MONITOR, CONFIG, SLOWLOG and redis-benchmark for atomicity, introspection and load tests. They integrate Redis via Java, Python, Node.js, Go, C# clients, tune pools, timeouts, pipelining, and serialize with UTF-8, JSON, MessagePack or Protobuf. They configure RDB schedules, AOF fsync and rewrite thresholds, run backups, restores, cold-start recovery and estimate load times and disk growth. They deploy primary-replica with Sentinel, set quorum, monitor replication lag/backlog, validate failover handling and are aware of cluster mode without designing shards. They enforce AUTH/ACLs, rotate passwords, enable TLS, run behind firewalls or container namespaces and avoid default-port exposure. They export metrics to Prometheus, DataDog or cloud monitors, build Grafana dashboards and alert on memory fragmentation, ops/sec, latency, hit ratio and client buffers with documented runbooks. They diagnose performance via INFO, SLOWLOG, tweak maxmemory, eviction policy, batching and pipelines, escalating deeper issues appropriately. They script SCAN-based key audits, bulk deletions, TTL checks and plan capacity around key count, memory and network throughput. They model caching, sessions, leaderboards, rate limiting, token buckets, distributed locks, pub/sub fan-out and metadata enrichment while discussing consistency, durability and stale-data trade-offs. They keep current through docs, release notes, community advisories and sandbox trials of features or modules such as RedisSearch and RedisJSON, knowing when to escalate to senior engineers."
+    },
+    {
+        "competency_id": "500de674-83f8-4d6e-949e-d75f0376495c",
+        "created_at": "2025-03-31T05:05:21.227830+00:00",
+        "proficiency": "BASIC",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "Python - FastAPI",
+        "scope": "A person with BASIC proficiency level in Python-FastAPI as a competency should be able to or is capable of using fundamental Python features (including data types, control flow, and environment management) to build and maintain small FastAPI services, confidently structure projects using routers and Pydantic models for data validation and serialization, handle common HTTP methods (GET, POST, PUT, DELETE) with path and query parameters, employ basic async/await in endpoints without deep concurrency optimization, configure and run local FastAPI services with uvicorn/hypercorn while troubleshooting common errors and logging, implement simple authentication or token-based approaches and handle environment variables securely, use Docker to containerize applications for small-scale deployments (e.g., Heroku or a VPS), incorporate foundational security measures such as CORSMiddleware and create simple custom middleware, write basic unit and integration tests with pytest and FastAPI’s test client, use Git for source control and maintain minimal documentation, and demonstrate elementary awareness of performance and scalability concepts—primarily focusing on correct CRUD implementations and fundamental best practices at a small scale."
+    }
+  
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "competency_id": "6c7503df-b957-44a4-a355-86800bd981be",
+        "created_at": "2025-07-29T03:14:19.087072+00:00",
+        "proficiency": "INTERMEDIATE",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "React - Optimization",   
+        "scope": "An individual with BASIC proficiency in React Optimization typically has 1–3 years of experience working with React applications and understands foundational performance concepts. They are capable of implementing basic optimization techniques such as code splitting, lazy loading, and efficient component structuring to improve initial load time and user experience. They have a working understanding of React rendering behavior and can reduce unnecessary re-renders using memoization and proper state management practices.They are familiar with handling API integrations efficiently, avoiding redundant network calls, and managing loading states to ensure smooth UI interactions. They can profile simple performance issues using browser tools and React DevTools, identify common bottlenecks, and apply standard optimization patterns. They write clean, maintainable code, follow best practices, and collaborate effectively within a team environment."
+    }
+]

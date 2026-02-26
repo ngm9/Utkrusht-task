@@ -1,0 +1,10 @@
+openai
+portkey-ai
+python-dotenv
+click
+paramiko
+PyGithub
+supabase
+requests
+pydantic
+python-digitalocean

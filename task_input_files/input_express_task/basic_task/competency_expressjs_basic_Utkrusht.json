@@ -1,0 +1,10 @@
+[
+    {
+        "competency_id": "09601b93-cf61-4022-9a1e-8d3ba9a1cda6",
+        "created_at": "2025-07-29T03:14:19.087072+00:00",
+        "proficiency": "BASIC",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "ExpressJS",
+        "scope": "At a BASIC proficiency level in ExpressJS, a candidate demonstrates foundational knowledge of core Express concepts (application object, routing, simple middleware) and basic server setup using Node.js with npm or yarn. They show awareness of fundamental HTTP methods, status codes, and can serve static files while relying on console output for debugging. They have minimal competence with environment variables, simple middleware configurations (like body-parser), and only rudimentary error-handling skills through generic middleware. Their exposure to security concepts is limited (e.g., no deep familiarity with libraries like Helmet), and they lack any notable performance optimization strategies. They might do simple manual or ad hoc testing with basic tools, having little to no structured testing approach. Their understanding of deployment remains confined to local or single-instance scenarios, typically using a shared repository workflow. They know how Express integrates with Node.js, but are not comfortable with advanced configurations, frameworks, or architectural patterns (like microservices or containerization). They do not actively employ advanced tools or best practices, displaying only a basic understanding of overall application structure. They can complete small tasks with reference materials, indicating willingness to learn and grow into more complex facets of ExpressJS."
+    }
+]

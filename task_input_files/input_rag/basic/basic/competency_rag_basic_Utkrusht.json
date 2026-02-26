@@ -1,0 +1,11 @@
+[
+    {
+        "competency_id": "8f0d6c4d-4888-4287-afcf-9b284fe00f50",
+        "created_at": "2025-07-29T03:14:19.087072+00:00",
+        "proficiency": "BASIC",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "Retrieval_Augmented_Generation",   
+        "scope": "A person with BASIC proficiency level in Retrieval Augmented Generation (RAG) as a competency should be able to assemble a standard RAG flow—query encoder, dense or BM25 retriever, optional reranker, context builder, LLM generator—and explain how it reduces hallucination and knowledge-cutoff issues. They can collect, clean, de-duplicate, chunk text with overlap, add metadata, embed it via sentence-transformers or OpenAI, Azure OpenAI, Cohere and HuggingFace APIs, and persist it in FAISS, Pinecone, Weaviate, Chroma or Elasticsearch-k-NN, re-embedding on corpus change. Using LangChain, LlamaIndex or Haystack, they wire together retrieval (cosine or dot-product, top-k, simple filters) and expose the pipeline through a CLI, REST endpoint or chat UI. They craft system/user/assistant prompts with zero-shot or few-shot examples, citation markers, delimiters, apply token budgeting with tiktoken/tokenizers and respect context windows. Manual spot checks plus recall@k, precision@k, latency and cost logging feed iterative tuning of chunk size, overlap, k value and prompt wording, with evaluation CSVs in version control. Governance basics include copyright awareness, PII redaction and understanding that embeddings can leak information. They create reproducible environments via Docker, requirements.txt or Terraform and instrument monitoring for response time, token usage, retrieval hit rate and per-1K-token cost. Failure modes—context dilution, retrieval miss, hallucination—are diagnosed and mitigated with larger k, hybrid BM25+vector, fresh embeddings or prompt guardrails. Clear diagrams, code comments, PR reviews and concise runbooks let them communicate design decisions to non-experts. They recognize but do not design advanced techniques like sophisticated rerankers, query expansion, hierarchical indices, fine-tuning or RL-based evaluation, escalating when needed. Typical auxiliary tools include NumPy/Pandas for preprocessing, Postman/cURL for API tests and VS Code debugger for step-through troubleshooting"
+    }
+  
+]

@@ -1,0 +1,14 @@
+{
+    "organization": {
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "organization_name": "Utkrusht",
+        "organization_background": "Utkrusht is a proof-of-skills marketplace that helps agile teams find talent with strong fundamental concepts with within days. We help aspiring professionals improve their profile with continuous improvement in their skills, documenting their journey and helping them fulfill their potential. We primarily build, conduct, proctor and disseminate proof-of-skill assessments in Technical domains like AI, ML, Fullstack development, High scale distributed systems, DevOps etc but do help non-tech roles like Sales, HR, Marketing etc" 
+    },
+  
+      "role_context": "A backend engineer with 1–2 years of experience in Python, FastAPI, and Docker is expected to build, containerize, and deploy simple FastAPI services. They should understand how Docker is used to create consistent development environments, write a basic Dockerfile, and run FastAPI applications inside containers. The engineer should be capable of exposing RESTful APIs, handling environment variables, and configuring lightweight deployments. They will typically work under the guidance of senior developers for CI/CD or multi-container orchestration, but should be able to independently build, run, and troubleshoot FastAPI apps inside Docker containers.",
+      
+      "questions_prompt": "Please ensure the questions you ask cover API Basics, Docker Fundamentals, and Application Deployment in the context of Python (FastAPI) and Docker:\n\n- **FastAPI Fundamentals**: The candidate should demonstrate understanding of how to create RESTful APIs using FastAPI, including defining routes, request/response models, and handling JSON data. They should know how to start the FastAPI app locally using `uvicorn`.\n\n- **Docker Basics**: The candidate should understand the purpose of containerization and be able to write a simple Dockerfile for a FastAPI project. They should be familiar with basic Docker commands (`docker build`, `docker run`, `docker ps`, etc.) and understand concepts like images, containers, ports, and volumes.\n\n- **Environment Configuration and Deployment**: The candidate should be able to explain how to use environment variables for configurations (e.g., database URLs or API keys) and how to pass them into containers. They should also know how to expose FastAPI ports (default 8000) and verify the service is running properly inside Docker.\n\n- **Troubleshooting and Logs**: The candidate should be able to check container logs using Docker commands, fix common issues such as missing dependencies or port binding errors, and rebuild the image as needed.\n\nThe goal is to evaluate whether the candidate can build a simple FastAPI application, containerize it using Docker, and run it reliably with correct configurations and minimal supervision."
+,
+      "yoe": "1-2"
+
+}

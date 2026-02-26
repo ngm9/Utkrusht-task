@@ -1,0 +1,11 @@
+[
+    {
+        "competency_id": "749852f5-5c37-446d-80d5-bc01389d7c10",
+        "created_at": "2025-03-31T05:05:21.227830+00:00",
+        "proficiency": "BEGINNER",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "Python",
+        "scope": "A person with BEGINNER proficiency level, having just finished fundamental courses and an internship, can write simple scripts, run them, fix basic syntax errors, and might have some awareness of Python environment management tools like pip or venv. They know fundamental data types (int, float, string, bool), basic control flow statements (if, for, while), and commonly used data structures (lists, dictionaries). They might have minimal exposure to virtual environments, version control using Git/GitHub for simple commits, and small code collaboration tasks. They rely heavily on print-based debugging, have limited knowledge of debugging tools, and often follow step-by-step tutorials for problem-solving. They can interpret simple Python error messages but lack deeper production-level experience or complex error handling skills. They have surface-level awareness of libraries such as requests, math, or random, and might know basic file operations (open, read, write). They do not fully grasp advanced concepts like object-oriented programming, testing frameworks (e.g., pytest), performance optimization, multi-threading, or asynchronous programming. Their overall knowledge is mostly academic or internship-based, without substantial exposure to enterprise-grade software development or best practices like code reviews and PEP 8 compliance."
+    
+    }
+]

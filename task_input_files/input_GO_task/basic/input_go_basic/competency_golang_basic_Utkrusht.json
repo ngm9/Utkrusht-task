@@ -1,0 +1,10 @@
+[
+    {
+        "competency_id": "7bb86559-abd3-45d6-bbd0-7827433efed7",
+        "created_at": "2025-07-29T03:14:19.087072+00:00",
+        "proficiency": "BASIC",
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "name": "Golang",
+        "scope": "A go developer with BASIC proficiency in Golang, typically represents 1–3 years of experience, with the ability to build, run, and test small applications using core tools like `go build`, `go run`, and `go test`. They grasp language fundamentals (variables, loops, conditionals) and data structures (arrays, slices, maps), have a basic understanding of pointers, and use standard libraries (`fmt`, `strings`, `errors`, `net/http`) proficiently. Their concurrency skills involve goroutines and channels for simple parallel tasks, occasionally using `sync.WaitGroup`, though advanced patterns are beyond their comfort. They rely on `go.mod` and `go.sum` for dependency management, can integrate basic third-party libraries (e.g., Gin, Echo for HTTP routing, Logrus for logging), and format code with `gofmt` or `goimports`. They write unit tests using the `testing` package but may not be familiar with advanced mocking or coverage tools. They apply simple design principles, follow basic code organization practices, and can perform minimal debugging with logs or `fmt.Println`. Their error handling aligns with Go best practices (error returns, nil checks), and they might implement simple retry or fallback logic. They can handle basic CRUD operations using `database/sql` or a simple ORM, but lack deep knowledge of database performance tuning. Refactoring at this level is usually straightforward, and they may need guidance on complex architecture, high-performance optimization, or less-common frameworks. While they manage day-to-day tasks effectively, they typically look to more experienced colleagues for deeper architectural and concurrency decisions."
+    }
+]

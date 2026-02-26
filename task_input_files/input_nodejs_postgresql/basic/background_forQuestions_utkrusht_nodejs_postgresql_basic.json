@@ -1,0 +1,12 @@
+{
+    "organization": {
+        "organization_id": "bfbd7da3-a43b-47dc-b828-146733b5c81e",
+        "organization_name": "Utkrusht",
+        "organization_background": "Utkrusht is a proof-of-skills marketplace that helps agile teams find talent with strong fundamental concepts with within days. We help aspiring professionals improve their profile with continuous improvement in their skills, documenting their journey and helping them fulfill their potential. We primarily build, conduct, proctor and disseminate proof-of-skill assessments in Technical domains like AI, ML, Fullstack development, High scale distributed systems, DevOps etc but do help non-tech roles like Sales, HR, Marketing etc" 
+    },
+    "role_context": "A software engineer with 1-2 years of experience in NextJs and TypeScript is expected to write features entirely and accurately. Write scalable code with good design practices. They will have some help from senior engineers on design and architecture.",
+    "yoe": "1-2",
+    "questions_prompt": "Please ensure the questions you ask cover Concurrency, Asynchronous Patterns, and Performance in the context of Next.js and TypeScript:  \n\n- **Asynchronous Programming Proficiency**: The candidate should demonstrate understanding of when and why to use `async/await` in server-side logic (e.g., API routes or `getServerSideProps`) and client-side data fetching . They should be able to handle common async pitfalls such as race conditions, unnecessary re-renders due to async state updates, and proper error handling.\n\n- **Managing Background Workflows**: The candidate should be able to design or integrate background processes such as triggering email sending, analytics logging, or API calls that are not critical to the immediate user experience. These can be implemented using serverless functions (API routes), webhooks, message queues, or background jobs (via external services or libraries like `bull` or `cron` jobs).\n\n- **Recognizing and Addressing Performance Bottlenecks**: They should be able to identify and improve issues that affect performance such as blocking synchronous operations in API routes, poor client-server data coordination, excessive or unoptimized rendering, and improper use of SSR/ISR/CSR strategies. They should also understand how to optimize these areas for better user experience and scalability.\n\nThe goal is to evaluate how the candidate applies async and concurrent patterns in Next.js and TypeScript, and handles background workflows efficiently using modern TypeScript patterns."
+
+
+}
