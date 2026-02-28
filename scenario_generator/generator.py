@@ -4,6 +4,7 @@ Core scenario generation logic — classification, LLM calls, validation, and pi
 
 import json
 import os
+import re
 import difflib
 from pathlib import Path
 from typing import Dict, List, Optional
@@ -17,6 +18,7 @@ from scenario_generator.prompts import (
     SCENARIO_SYSTEM_PROMPT,
     SCENARIO_GENERATION_SCHEMA,
     SCENARIO_EVAL_SCHEMA,
+    PROFICIENCY_LIMITS,
     build_generation_prompt,
     build_eval_prompt,
 )
@@ -79,64 +81,35 @@ def format_cost_summary(usage_by_model: Dict) -> str:
 
 
 # ============================================================================
-# TECHNOLOGY CATEGORY CLASSIFICATION
+# COMPETENCY NAME HELPERS
 # ============================================================================
 
-TECH_CATEGORIES = {
-    # Frontend
-    "ReactJs": "FRONTEND",
-    "React Frameworks": "FRONTEND",
-    "React Native": "FRONTEND",
-    "NextJs": "FRONTEND",
-    "TypeScript": "FRONTEND",
-    # Database
-    "PostgreSQL": "DATABASE",
-    "SQL": "DATABASE",
-    "MongoDB": "DATABASE",
-    # Backend
-    "Java": "BACKEND",
-    "Java - Spring Boot": "BACKEND",
-    "Java - Multithread Programming": "BACKEND",
-    "Java - Distributed Systems Concurrency": "BACKEND",
-    "Python": "BACKEND",
-    "Python - FastAPI": "BACKEND",
-    "Golang": "BACKEND",
-    "NodeJs": "BACKEND",
-    "ExpressJS": "BACKEND",
-    "Kafka": "BACKEND",
-    "Redis": "BACKEND",
-    "Docker": "BACKEND",
-    "Shell Scripting": "BACKEND",
-    "Apache Camel": "BACKEND",
-    "Python - Numpy": "BACKEND",
-    "Python - Pandas": "BACKEND",
-    "Retrieval_Augmented_Generation": "BACKEND",
-    "ReactJs - Optimization": "FRONTEND",
-    # Non-code
-    "Prompt Engineering": "NON_CODE",
-    "Prompt Engineering for Product Managers": "NON_CODE",
-    "AI Literacy": "NON_CODE",
-    "AI Literacy for Leaders": "NON_CODE",
+# Names that indicate non-code competencies (used only for file routing)
+NON_CODE_COMPETENCIES = {
+    "Prompt Engineering",
+    "Prompt Engineering for Product Managers",
+    "AI Literacy",
+    "AI Literacy for Leaders",
 }
 
 
-def classify_tech_category(competencies: List[Dict]) -> str:
-    """Classify competencies into a technology category for prompt selection."""
-    categories = set()
+def is_non_code_competency(competencies: List[Dict]) -> bool:
+    """Check if any competency is a non-code type (for file routing only)."""
     for comp in competencies:
         name = comp.get("name", "").strip()
-        cat = TECH_CATEGORIES.get(name, "BACKEND")
-        categories.add(cat)
+        if name in NON_CODE_COMPETENCIES:
+            return True
+    return False
 
-    # If any competency is NON_CODE, treat the whole set as NON_CODE
-    if "NON_CODE" in categories:
-        return "NON_CODE"
 
-    # Multiple different coding categories → MIXED_STACK
-    if len(categories) > 1:
-        return "MIXED_STACK"
-
-    return categories.pop() if categories else "BACKEND"
+def get_competency_names(competencies: List[Dict]) -> str:
+    """Extract competency names as a comma-separated string for prompt injection."""
+    names = []
+    for comp in competencies:
+        name = comp.get("name", "").strip()
+        if name:
+            names.append(name)
+    return ", ".join(names)
 
 
 # ============================================================================
@@ -159,12 +132,11 @@ def build_scenario_key(competencies: List[Dict]) -> str:
 
 
 def get_target_scenario_file(competencies: List[Dict]) -> Path:
-    """Determine the correct scenario file based on competency category and proficiency."""
+    """Determine the correct scenario file based on competency type and proficiency."""
     base = Path(__file__).parent.parent / "task_input_files" / "task_scenarios"
-    category = classify_tech_category(competencies)
     proficiency = competencies[0].get("proficiency", "BASIC").upper() if competencies else "BASIC"
 
-    if category == "NON_CODE":
+    if is_non_code_competency(competencies):
         return base / "task_sceanrio_no_code.json"
     elif proficiency == "INTERMEDIATE":
         return base / "task_scenarios_intermediate.json"
@@ -289,19 +261,26 @@ def get_combined_scope_text(competencies: List[Dict]) -> str:
 # VALIDATION & DEDUPLICATION
 # ============================================================================
 
-def validate_scenario_structure(scenario: str, tech_category: str) -> bool:
-    """Validate that a scenario meets structural requirements.
+def validate_scenario_structure(scenario: str, proficiency: str = "BASIC") -> bool:
+    """Validate that a scenario meets structural requirements for its proficiency level.
 
     Checks for:
-    - Minimum/maximum length
-    - Required bold-header sections: **Current Implementation:**, **Your Task:**, **Success Criteria:**
+    - Minimum/maximum length (per proficiency)
+    - Required bold-header sections
+    - Word count limits (per proficiency)
+    - Bullet point count limits (per proficiency)
     """
-    if len(scenario) < 150:
+    limits = PROFICIENCY_LIMITS.get(proficiency, PROFICIENCY_LIMITS["BASIC"])
+
+    if len(scenario) < 100:
         logger.warning(f"Scenario too short ({len(scenario)} chars): {scenario[:80]}...")
         return False
 
-    if len(scenario) > 3000:
-        logger.warning(f"Scenario too long ({len(scenario)} chars): {scenario[:80]}...")
+    if len(scenario) > limits["max_chars"]:
+        logger.warning(
+            f"Scenario too long for {proficiency} level ({len(scenario)} chars, "
+            f"max {limits['max_chars']}): {scenario[:80]}..."
+        )
         return False
 
     # Check for required bold-header sections
@@ -310,6 +289,34 @@ def validate_scenario_structure(scenario: str, tech_category: str) -> bool:
         if header not in scenario:
             logger.warning(f"Scenario missing required section '{header}': {scenario[:80]}...")
             return False
+
+    # Check word count
+    word_count = len(scenario.split())
+    if word_count > limits["max_words"]:
+        logger.warning(
+            f"Scenario too verbose for {proficiency} level ({word_count} words, "
+            f"max {limits['max_words']}): {scenario[:80]}..."
+        )
+        return False
+
+    # Check bullet point count in "Your Task" section
+    task_section = ""
+    if "**Your Task:**" in scenario and "**Success Criteria:**" in scenario:
+        task_start = scenario.index("**Your Task:**") + len("**Your Task:**")
+        task_end = scenario.index("**Success Criteria:**")
+        task_section = scenario[task_start:task_end]
+
+    bullet_count = task_section.count("- ") + task_section.count("• ")
+    # Also count numbered items like "1. ", "2. "
+    numbered_bullets = len(re.findall(r'\d+\.\s', task_section))
+    total_bullets = bullet_count + numbered_bullets
+
+    if total_bullets > limits["max_bullets"]:
+        logger.warning(
+            f"Scenario has too many bullet points for {proficiency} level "
+            f"({total_bullets} bullets, max {limits['max_bullets']}): {scenario[:80]}..."
+        )
+        return False
 
     return True
 
@@ -340,27 +347,38 @@ def call_llm_generate(
     count: int,
     existing_scenarios: List[str],
     eval_feedback: List[Dict] = None,
+    background: Optional[Dict] = None,
 ) -> tuple:
     """Call the LLM to generate task scenarios.
 
     Args:
         eval_feedback: Optional list of dicts with 'scenario' and 'reason' keys from
                        previous evaluation failures, so the LLM avoids the same mistakes.
+        background: Optional background dict from background_forQuestions_*.json,
+                    used to inject assessment scope into the prompt.
 
     Returns:
         (scenarios: List[str], usage: Dict with input_tokens/output_tokens)
     """
     proficiency = competencies[0].get("proficiency", "BASIC").upper()
-    tech_category = classify_tech_category(competencies)
+    competency_names = get_competency_names(competencies)
     competencies_text = format_competencies_with_scopes(competencies)
+
+    competency_names_list = [
+        comp.get("name", "").strip()
+        for comp in competencies
+        if comp.get("name", "").strip()
+    ]
 
     prompt = build_generation_prompt(
         competencies_with_scopes=competencies_text,
         proficiency=proficiency,
-        tech_category=tech_category,
+        competency_names=competency_names,
         count=count,
         existing_scenarios=existing_scenarios,
         eval_feedback=eval_feedback,
+        background=background,
+        competency_names_list=competency_names_list,
     )
 
     messages = [
@@ -479,11 +497,11 @@ def generate_scenarios_for_competencies(
         return [], usage_by_model
 
     scenario_key = build_scenario_key(competencies)
-    tech_category = classify_tech_category(competencies)
+    competency_names = get_competency_names(competencies)
     proficiency = competencies[0].get("proficiency", "BASIC").upper()
 
     logger.info(f"Generating scenarios for: {scenario_key}")
-    logger.info(f"Tech category: {tech_category}, Proficiency: {proficiency}")
+    logger.info(f"Competencies: {competency_names}, Proficiency: {proficiency}")
 
     # Load existing scenarios for deduplication
     default_files = [
@@ -515,6 +533,7 @@ def generate_scenarios_for_competencies(
                 count=needed,
                 existing_scenarios=key_existing + passing_scenarios,
                 eval_feedback=eval_failure_feedback if eval_failure_feedback else None,
+                background=background,
             )
             usage_by_model[GENERATION_MODEL]["input_tokens"] += gen_usage["input_tokens"]
             usage_by_model[GENERATION_MODEL]["output_tokens"] += gen_usage["output_tokens"]
@@ -528,10 +547,10 @@ def generate_scenarios_for_competencies(
 
         logger.info(f"LLM generated {len(generated)} scenarios")
 
-        # Structural validation
+        # Structural validation (with per-proficiency limits)
         structurally_valid = []
         for s in generated:
-            if validate_scenario_structure(s, tech_category):
+            if validate_scenario_structure(s, proficiency):
                 structurally_valid.append(s)
             else:
                 logger.warning(f"Scenario failed structural validation: {s[:80]}...")

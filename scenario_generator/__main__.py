@@ -6,14 +6,21 @@ Usage:
 """
 
 import json
+import sys
+import io
 from pathlib import Path
 
 import click
 
+# Fix Unicode output on Windows (cp1252 can't handle chars like →, •, etc.)
+if sys.platform == "win32":
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
+
 from scenario_generator.generator import (
     generate_scenarios_for_competencies,
     build_scenario_key,
-    classify_tech_category,
+    get_competency_names,
     get_target_scenario_file,
     save_generated_scenarios,
     create_openai_client,
@@ -97,7 +104,7 @@ def generate_scenarios_cli(competency_file, count, output, append, background_fi
         target_file = get_target_scenario_file(competencies)
 
     click.echo(f"Scenario key: {scenario_key}")
-    click.echo(f"Tech category: {classify_tech_category(competencies)}")
+    click.echo(f"Competencies: {get_competency_names(competencies)}")
     click.echo(f"Target file: {target_file}")
     click.echo(f"Generating {count} scenarios...")
     click.echo()
